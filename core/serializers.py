@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from core.models import User, FinancialInstrument, Transaction
+from .models import User, FinancialInstrument, Transaction
 
 
 class UserSerializer(serializers.ModelSerializer):

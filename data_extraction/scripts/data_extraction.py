@@ -1,5 +1,5 @@
 import yfinance as yf
-from datetime import datetime
+from django.utils import timezone
 from ..models import StockData
 
 
@@ -16,5 +16,5 @@ def fetch_stock_data(symbol):
             low_price=last_row['Low'],
             close_price=last_row['Close'],
             volume=last_row['Volume'],
-            date=datetime.now()
+            date=timezone.now(),
         )
